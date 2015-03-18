@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<layout>
+
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <action method="addTab">
+                <name>divante_customer_log_tab</name>
+                <block>divante_customerlog/adminhtml_customer_edit_tab_log</block>
+            </action>
+        </reference>
+    </adminhtml_customer_edit>
+
+    <adminhtml_customer_log_grid>
+        <block name="root" type="core/text_list">
+            <block type="divante_customerlog/adminhtml_customer_edit_tab_log_list" name="customer_log_grid"/>
+        </block>
+    </adminhtml_customer_log_grid>
+
+    <adminhtml_customer_log_details>
+        <reference name="content">
+            <block type="divante_customerlog/adminhtml_customer_edit_tab_log_details_info" name="log_details_info" template="divante_customerlog/details/info.phtml"/>
+            <block type="divante_customerlog/adminhtml_customer_edit_tab_log_details_changes" name="log_details_changes" template="divante_customerlog/details/changes.phtml"/>
+        </reference>
+    </adminhtml_customer_log_details>
+
+    <adminhtml_customer_log_customertab>
+        <block name="root" type="core/text_list">
+            <block type="divante_customerlog/adminhtml_customer_edit_tab_log" name="customer_log_tab" />
+        </block>
+    </adminhtml_customer_log_customertab>
+
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Divante_CustomerLog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Divante_CustomerLog>
+    </modules>
+</config>
